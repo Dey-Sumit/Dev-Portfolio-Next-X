@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
             {/* //!sidebar */}
             <Sidebar />
          </div>
-         <div className='flex flex-col col-span-12 bg-white rounded-2xl dark:text-white lg:col-span-9'>
+         <div className='flex flex-col col-span-12 overflow-hidden bg-white rounded-2xl dark:text-white lg:col-span-9'>
             {/* //!navbar */}
             <Navbar />
             {/* //!about */}

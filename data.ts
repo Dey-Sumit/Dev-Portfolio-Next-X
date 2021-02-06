@@ -2,14 +2,8 @@ import { RiComputerLine } from 'react-icons/ri'
 import { FaServer } from 'react-icons/fa'
 import { AiOutlineAntDesign, AiOutlineApi } from 'react-icons/ai'
 import { MdDeveloperMode } from 'react-icons/md'
-import { BsCircleFill } from 'react-icons/bs'
-
-// import { Project, Service, Skill } from './types'
-interface Service {
-   Icon: any //TODO fix any
-   title: string
-   about: string
-}
+import { FunctionComponent } from 'react'
+import { Service } from './types'
 
 export const services: Service[] = [
    {
