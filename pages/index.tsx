@@ -18,7 +18,7 @@ const About: NextPage = () => {
             I am currently pursuing B.Tech Degree(Final Year) in Computer
             Science Engineering from Academy of Technology. I have 3+ years of
             experience in Web Development and I have a Youtube Channel where I
-            teach Full Stack Web Development Projects
+            teach Full Stack Web Development
          </h6>
          <div
             className='flex-grow p-4 mt-5 bg-gray-400 dark:bg-black-100'
@@ -31,7 +31,7 @@ const About: NextPage = () => {
                {/* children's initial and animate property should be same as the parent during a stagger effect  */}
                {services.map(service => (
                   <div
-                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 lg:col-span-1 '
+                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 md:col-span-1 '
                      key={service.title}>
                      <ServiceCard service={service} />
                   </div>

@@ -5,3 +5,9 @@ export interface Service {
    title: string
    about: string
 }
+
+export interface Skill {
+   Icon: IconType
+   name: string
+   level: string
+}
