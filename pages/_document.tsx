@@ -4,6 +4,7 @@ class MyDocument extends Document {
    render() {
       return (
          <Html lang='en'>
+            {/* <Html lang='en' class='dark'> */}
             <Head>
                <link rel='preconnect' href='https://fonts.gstatic.com' />
                <link
@@ -11,7 +12,7 @@ class MyDocument extends Document {
                   rel='stylesheet'
                />
             </Head>
-            <body className='bg-fixed bg-gradient-to-r from-green to-blue-500 dark:from-black-500 dark:to-black-700'>
+            <body className='bg-fixed bg-gradient-to-r from-green to-blue-500 dark:from-black-300 dark:to-black-700 dark:text-white'>
                <Main />
                <NextScript />
             </body>

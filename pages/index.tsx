@@ -31,7 +31,7 @@ const About: NextPage = () => {
                {/* children's initial and animate property should be same as the parent during a stagger effect  */}
                {services.map(service => (
                   <div
-                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-500 md:col-span-1 '
+                     className='col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-black-200 md:col-span-1 '
                      key={service.title}>
                      <ServiceCard service={service} />
                   </div>
