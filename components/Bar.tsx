@@ -1,8 +1,8 @@
 import { FunctionComponent } from 'react'
 
-import { Skill } from '../types'
+import { ISkill } from '../types'
 
-const Bar: FunctionComponent<{ value: Skill }> = ({
+const Bar: FunctionComponent<{ value: ISkill }> = ({
    value: { Icon, level, name },
 }) => {
    const bar_width = `${level}%`
