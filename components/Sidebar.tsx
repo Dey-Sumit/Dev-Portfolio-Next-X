@@ -2,6 +2,7 @@ import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { GiTie } from "react-icons/gi";
 import { GoLocation } from "react-icons/go";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 const Sidebar = () => {
   const { theme, setTheme } = useTheme();
 
@@ -10,7 +11,14 @@ const Sidebar = () => {
   };
   return (
     <>
-      <img
+      {/* <img
+        src="https://sumitdey.netlify.app/static/media/max.9d3a6d3e.jpg"
+        alt="avatar"
+        className="w-32 h-32 mx-auto border rounded-full "
+      /> */}
+      <Image
+        width="128px"
+        height="128px"
         src="https://sumitdey.netlify.app/static/media/max.9d3a6d3e.jpg"
         alt="avatar"
         className="w-32 h-32 mx-auto border rounded-full "

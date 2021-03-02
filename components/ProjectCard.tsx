@@ -5,7 +5,11 @@ import { AiFillGithub, AiFillProject } from "react-icons/ai";
 // TODO Github
 import { MdClose } from "react-icons/md";
 
-const ProjectCard: FunctionComponent<{ project: IProject }> = ({
+const ProjectCard: FunctionComponent<{
+  project: IProject;
+  showDetail: null | Number;
+  setShowDetail: (id: Number | null) => void;
+}> = ({
   project: {
     name,
     image_path,
@@ -13,9 +17,11 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
     github_url,
     description,
     key_techs,
+    id,
   },
+  setShowDetail,
+  showDetail,
 }) => {
-  const [showDetail, setShowDetail] = useState(false);
   // TODO scroll to top
   return (
     <>
@@ -29,29 +35,41 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
         onClick={() => setShowDetail(true)}
         className="cursor-pointer "
       /> */}
-      <img
+      <Image
+        width="300"
+        height="150"
+        src={image_path}
+        layout="responsive"
+        alt={name}
+        onClick={() => setShowDetail(id)}
+        className="cursor-pointer"
+        quality={10}
+      />
+      {/* <img
+        width="300"
+        height="150"
         src={image_path}
         alt={name}
-        onClick={() => setShowDetail(true)}
+        onClick={() => setShowDetail(id)}
         className="cursor-pointer "
-      />
+      /> */}
 
       <p className="my-2 text-center">{name}</p>
       {/* //step 1 */}
 
-      {showDetail && (
+      {showDetail === id && (
         <div className="absolute top-0 left-0 z-10 grid w-full h-auto p-2 text-black bg-gray-100 rounded-lg md:p-10 dark:bg-black-100 dark:text-gray-100 md:grid-cols-2 gap-x-12 ">
           <div>
             <div className="border-4 border-gray-100 ">
-              {/* <Image
+              <Image
                 src={image_path}
                 alt={name}
                 className="overflow-hidden"
                 layout="responsive"
                 width={300}
                 height={150}
-              /> */}
-              <img src={image_path} alt={name} />
+              />
+              {/* <img src={image_path} alt={name} /> */}
             </div>
             <div className="flex justify-center my-4 space-x-3">
               <a
@@ -86,7 +104,7 @@ const ProjectCard: FunctionComponent<{ project: IProject }> = ({
 
           <button
             className="absolute p-1 bg-gray-200 rounded-full top-3 right-3 focus:outline-none dark:bg-black-200"
-            onClick={() => setShowDetail(false)}
+            onClick={() => setShowDetail(null)}
           >
             <MdClose size={30} />
           </button>
