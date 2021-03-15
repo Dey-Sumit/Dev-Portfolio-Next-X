@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
+import { fadeInUp, routeFade, stagger } from "../animations";
 import ProjectCard from "../components/ProjectCard";
 import ProjectNavbar from "../components/ProjectNavbar";
 import { projects as projectsData } from "../data";
@@ -25,15 +27,28 @@ const Projects = () => {
   };
 
   return (
-    <div className="px-5 py-2 overflow-y-scroll " style={{ height: "65vh" }}>
+    <motion.div
+      className="px-5 py-2 overflow-y-scroll "
+      style={{ height: "65vh" }}
+      variants={routeFade}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
       <ProjectNavbar
         handleFilterCategory={handleFilterCategory}
         active={active}
       />
-      <div className="relative grid grid-cols-12 gap-4 my-3">
+      <motion.div
+        variants={stagger}
+        initial="initial"
+        animate="animate"
+        className="relative grid grid-cols-12 gap-4 my-3"
+      >
         {/* <AnimatePresence> */}
         {projects.map((project) => (
-          <div
+          <motion.div
+            variants={fadeInUp}
             key={project.id}
             className="col-span-12 p-2 bg-gray-200 rounded-lg dark:bg-black-200 sm:col-span-6 lg:col-span-4"
           >
@@ -43,11 +58,11 @@ const Projects = () => {
               setShowDetail={setShowDetail}
               showDetail={showDetail}
             />
-          </div>
+          </motion.div>
         ))}
         {/* </AnimatePresence> */}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 
