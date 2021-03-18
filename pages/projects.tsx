@@ -9,6 +9,7 @@ import { Category } from "../types";
 const Projects = () => {
   const [projects, setProjects] = useState(projectsData);
   const [active, setActive] = useState("All");
+
   const [showDetail, setShowDetail] = useState<null | Number>(null);
 
   const handleFilterCategory = (category: Category | "all") => {

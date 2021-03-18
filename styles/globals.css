@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 body {
-   font-family: sans-serif;
-   color: #354358;
+  font-family: sans-serif;
+  color: #354358;
 }
 
-/* //TODO put this in document */
-/* body {
-   background-color: black;
-} */
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(to right bottom, #00f260, #0575e6);
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+  /* height 0:  hide the horizontal scrollbar */
+}

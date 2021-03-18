@@ -44,7 +44,7 @@ const ProjectCard: FunctionComponent<{
         layout="responsive"
         alt={name}
         onClick={() => setShowDetail(id)}
-        className="cursor-pointer"
+        className="cursor-pointer "
         quality={10}
       />
       {/* <img
