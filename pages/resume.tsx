@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Head from "next/head";
 import { fadeInUp, routeFade } from "../animations";
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
@@ -12,6 +13,9 @@ const Resume = () => {
       animate="visible"
       exit="exit"
     >
+      <Head>
+        <title>Sumit Dey | Web Developer</title>
+      </Head>
       {/* //! Education & Experience */}
       <div className="grid gap-6 md:grid-cols-2">
         <motion.div variants={fadeInUp} initial="initial" animate="animate">

@@ -17,11 +17,11 @@ const Sidebar = () => {
         className="w-32 h-32 mx-auto border rounded-full "
       /> */}
       <Image
-        width="128px"
-        height="128px"
+        width="128"
+        height="128"
         src="https://sumitdey.netlify.app/static/media/max.9d3a6d3e.jpg"
         alt="avatar"
-        className="w-32 h-32 mx-auto border rounded-full "
+        className="mx-auto border rounded-full "
       />
       <h3 className="my-4 text-3xl font-medium tracking-wider font-kaushan">
         <span className="text-green ">Sumit</span> Dey
@@ -41,13 +41,20 @@ const Sidebar = () => {
 
       {/* Socials */}
       <div className="flex justify-around w-9/12 mx-auto my-5 text-green md:w-full ">
-        <a href="https://www.youtube.com/channel/UClW8d1f5m0QAE_Ig024EP6A">
+        {/* //? THIS 👇 aria label */}
+        <a
+          href="https://www.youtube.com/channel/UClW8d1f5m0QAE_Ig024EP6A"
+          aria-label="YouTube"
+        >
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="https://www.linkedin.com/in/sumit-dey-4a04431a9/">
+        <a
+          href="https://www.linkedin.com/in/sumit-dey-4a04431a9/"
+          aria-label="Linkedin"
+        >
           <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="https://www.instagram.com/_sumax__/">
+        <a href="https://www.instagram.com/_sumax__/" aria-label="GitHub">
           <AiFillGithub className="w-8 h-8 cursor-pointer" />{" "}
         </a>
       </div>
