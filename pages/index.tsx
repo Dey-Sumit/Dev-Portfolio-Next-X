@@ -10,7 +10,7 @@ import { services } from "../data";
 import { Service } from "../types";
 
 const About: NextPage = () => {
-  console.log(services);
+  // console.log(services);
 
   return (
     <div className="flex flex-col flex-grow px-6 pt-1 ">

@@ -43,7 +43,7 @@ const Sidebar = () => {
         <a href="https://www.youtube.com/channel/UClW8d1f5m0QAE_Ig024EP6A">
           <AiFillYoutube className="w-8 h-8 cursor-pointer" />
         </a>
-        <a href="https://www.linkedin.com/in/sumit-dey-4a04431a9/">
+        <a href="https://www.linkedin.com/in/sumit-dey-4a04431a9/" >
           <AiFillLinkedin className="w-8 h-8 cursor-pointer" />
         </a>
         <a href="https://www.instagram.com/_sumax__/">
